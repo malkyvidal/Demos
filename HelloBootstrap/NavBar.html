@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+
+    
+
+
+    <div style="max-width:1024px;width:100%;margin:auto">
+        <!--para crear un menu-->
+        <!--agregar un elenmento nav o div, Agregarle la clase navbar y el role navigation-->
+        <!--navbar-defaul o navbar-inverse son los colores possibles del menu-->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!--el contenido del menu debe ir en una div con la clase container o container-fluid-->
+            <div class="container">
+                <!--agrego el header(inicio del sitio)-->
+                <div class="navbar-header">
+                    <a class="navbar-brand">Home</a>
+                    <!--hamburgesa-->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hamburger-navigation">
+                        <!-- placeholder -->
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                links que no son parte del navbar
+                <div class="navbar-text navbar-right">
+                    <a class="navbar-link">Seguinos</a>
+                </div>
+
+
+
+                <!--este div es el container de los links para que funcione la hamburguesa-->
+                <div class="class=" navbar-collapse" id="hamburger-navigation">
+
+                    <!--agrego menuses simples con listas desordenadas agreganbdo las clases nav y navbar-nav-->
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" class="active">Current Page</a><span class="sr-only">current</span></li>
+                        <li><a href="#">Link</a></li>
+                    </ul>
+
+                    <!--agrego DropDown-->
+
+                    <ul class="nav navbar-nav ">
+                        <!--se necesita un list item con la clase dropdown-->
+                        <li class="dropdown">
+                            <!--el link que hace la cabecera del dropdown fijarse clase role y data-toggle-->
+                            <a class="dropdown-toggle" role="button" data-toggle="dropdown">Dropdown<span class="caret" /></a>
+                            <!--el contenido del menu va en una lista desordenada con la clase dropdown-menu-->
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Option one</a></li>
+                                <li><a href="#">Option two</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+  
+
+
+
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+
+</body>
+</html>

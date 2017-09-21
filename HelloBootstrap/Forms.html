@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container">
+
+        <!--clase form-horizontal para que el label y el ipnput esten en la misma linea-->
+        <form role="form" class="form-horizontal">
+
+            <!--lo de adentro del form.group se trata como una unidad-->
+            <!--form group automaticamente agrega una row-->
+            <div class="form-group">
+                <!--clase control label para conseguir el formato de bootstrap-->
+                <!--le tenemos que dar la clase col al label y creamos un contenedor para el input para poder ponerl la clase col,porque las lases de columnas no funcionan en inputs-->
+                <label for="email" class="control-label col-md-3">Email:</label>
+                <div class="col-md-6">
+                    <input name="email" placeholder="Email" type="email" class="form-control " id="email" />
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label for="twitter" class="control-label col-md-3" >Twitter:</label>
+
+                
+                
+                <div class="col-md-6 ">
+                    <!--con el input-group le agregamos elementos al input pero que parezca como parte del input, sirve para agregar info al input-->
+                    <!--los elementos del input-group van dentro de un container,para no desalinear el form-->
+                    <div class="input-group">
+                        <!--El agregado al input-->
+                        <!--el agregado puede ser un texto como abajo, o un glyphicons-->
+                        <span class="input-group-addon">@</span>
+                        <input type="text" placeholder="Twitter" class="form-control" id="twitter" name="twitter" />
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <!--agregar la clase has-error(por javascript) al form-group para poner un reborde rojo y cambiar el color del label cuaando hay un error-->
+            <div class="form-group has-error">
+                <label for="nom" class="control-label col-md-3">Nombre:</label>
+
+
+
+                <div class="col-md-6 ">
+                    
+                    <div class="input-group">
+                      
+                        
+                        <input type="text" placeholder="Nombre" class="form-control" id="nom" name="nom" />
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+                <!--btn-group data-toggle  para hacer que radio buttons y check boxes parezcan botones-->
+
+                <div class="btn-group col-md-offset-3 col-md-4 " data-toggle="buttons">
+
+                    <!--el label va a ser el contenedor de los radios u checks-->
+                    <label class="btn btn-primary" >
+                        <input type="radio" name="sample" id="first"  />First
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="radio" name="sample" id="second" />Second
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="radio" name="sample" id="third" />Third
+                    </label>
+                </div>
+
+            </div>
+            <div class="form-group " style="padding-left:15px">
+                
+                <!-- para dar el formato a un noton usamos la clase btn btn-default, se puede usar con input button, button o linkis-->
+                <button type="submit" class="btn btn-default    col-md-2 col-md-offset-3 ">Submit form</button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+</body>
+</html>

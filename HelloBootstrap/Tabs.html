@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#Home" role="tab" data-toggle="tab">Home</a></li>
+                    <li role="presentation"><a id="uno" href="#Profile" role="tab" data-toggle="tab">Profile</a></li>
+                    <li role="presentation"><a id="dos" href="#Messages" role="tab" data-toggle="tab">Messages</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="tab-content">
+        <div class="tab-pane" id="Profile">
+
+        </div>
+        <div class="tab-pane" id="Messages">
+
+        </div>
+    </div>
+    
+    <!--<ul class="nav nav-tabs"  role="tablist">
+        <li><a href="#uno" data-toggle="tab" role="tab" >Datos Personales</a></li>
+        <li><a href="#Dos" data-toggle="tab" role="tab"></a>Estudios</li>
+        <li><a href="#Tres" data-toggle="tab" role="tab"></a>Programa</li>
+    </ul>
+
+    <div class="tab-pane" id="uno" >
+        
+    </div>
+    <div class="tab-pane" id="dos"></div>
+    <div class="tab-pane" id="tres"></div>-->
+
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#dos").click(function () {
+                
+                $("#Messages").load("WebForm1.aspx");
+            });
+
+            $("#uno").click(
+
+                function () {
+                    console.log("amigacho");
+                    $("#Profile").load("Perfil.aspx");
+                }
+
+
+                )
+
+        })
+    </script>
+</body>
+</html>
